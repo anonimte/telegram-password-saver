@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 320px; padding: 15px; font-family: system-ui, sans-serif; }
+    input { width: 100%; margin: 8px 0; padding: 8px; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; margin: 8px 0; font-size: 16px; }
+    #status { margin-top: 10px; text-align: center; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Telegram Password Saver</h2>
+  
+  <label>Bot Token:</label>
+  <input id="token" type="password" placeholder="123456:ABC...">
+  
+  <label>Chat ID:</label>
+  <input id="chatId" type="text" placeholder="987654321">
+  
+  <button id="save">💾 Save Settings</button>
+  <button id="test">📨 Send Test Message</button>
+  
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

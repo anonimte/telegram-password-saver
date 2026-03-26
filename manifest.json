@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Telegram Password Saver",
+  "version": "1.0",
+  "description": "Sends your logins to your private Telegram bot",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.telegram.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Telegram Password Saver"
+  }
+}
